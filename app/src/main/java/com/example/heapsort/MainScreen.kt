@@ -88,10 +88,10 @@ fun MainScreen(vm: VM ,           navigateToSourceCode:()->Unit
         Button(onClick = {
             try {
 
-                scope.launch(Dispatchers.Main) {
-                    vm.sortList()
+                HeapSort.heapSort(vm.unsorted.toIntArray())
 
-                }
+
+
             } catch (e: Exception) {
 
             }
