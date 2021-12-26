@@ -3,6 +3,16 @@ package com.example.heapsort
 import java.util.*
 
 object HeapSort{
+     
+     fun heapSort(array:Array<Int>){
+          
+          for (i in array.size - 1 downTo 1) {
+        val temp = array[0]
+        array[0] = array[i]
+        array[i] = temp
+        maxHeapify(array, 0, i - 1)
+    }
+     }
 
 
      fun buildMaxHeap(array: IntArray) {
